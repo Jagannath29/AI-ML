@@ -1,0 +1,46 @@
+// simple json format for logging
+
+{
+    "version": 1,
+    "disable_existing_logger": false,
+    "formatters": {
+        "simple": {
+            "format": "%(levelname)s: %(message)s",
+            "datefmt": "%Y-%m-%dT%H:%M:%S%z"
+        }
+    },
+
+    "json": {
+        "()": "mylogger.MyJSONFormatter",
+        "fmt_keys": {
+            "level": "levelname",
+            "message": "message",
+            "timestamp": "timestamp",
+            "loggers": "name",
+            "module": "module",
+            "function": "funcname",
+            "line": "lineno",
+            "threadname": "threadname"
+        }
+    },
+    "handlers": {
+        "stdout": {
+            "class": "logging.StreamHandler",
+            "formatter": "simple",
+            "stream": "ext://sys.stdout"
+        }
+    },
+    "file": {
+
+    },
+    "queue_handler":{
+
+    },
+    "loggers": {
+        "root": {
+            "level": "debug",
+            "handlers": ["stdout"]
+        }
+    }
+}
+
