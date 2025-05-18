@@ -1,0 +1,13 @@
+# Keep raw data out of container
+data/raw/*
+data/processed/*
+
+# Don't ignore the model file
+!models/classifier.pkl
+
+# Other standard ignores
+__pycache__/
+*.pyc
+newEnv/
+.git/
+.pytest_cache/

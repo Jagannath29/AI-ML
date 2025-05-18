@@ -1,0 +1,62 @@
+site_name: Bank Note Prediction Using FastAPI
+site_author: Jagannath Khadka
+site_description: A machine learning project for bank note authentication using FastAPI
+
+# Repository
+repo_name: Bank Note Prediction
+repo_url: https://github.com/Jagannath29/fast_api_application_12_factor_principle.git
+
+# Configuration
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+# Navigation
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Project Structure:
+    - Data: structure/data.md
+    - Models: structure/models.md
+    - API Documentation: structure/api.md
+  - Development:
+    - Installation: development/installation.md
+    - Contributing: development/contributing.md
+
+# Extensions
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - admonition
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          rendering:
+            show_source: true

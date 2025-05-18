@@ -1,0 +1,39 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "bank_note_prediction_using_fast_api"
+version = "0.0.1"
+description = "This is a simple fast_api demo"
+authors = [
+  { name = "Jagannath Khadka" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 99
+src = ["bank_note_prediction_using_fast_api"]
+include = ["pyproject.toml", "bank_note_prediction_using_fast_api/**/*.py"]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["bank_note_prediction_using_fast_api"]
+force-sort-within-sections = true
+
