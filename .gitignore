@@ -1,1 +1,15 @@
-ai_ml_venv
+
+# virtual env
+ai_ml_venv/
+**/venv/
+**/__pycache__/
+
+
+#Environment variables
+.env
+
+
+
+# Jupyter notebook outputs
+**/.ipynb_checkpoints/
+
