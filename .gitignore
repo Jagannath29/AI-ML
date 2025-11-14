@@ -1,6 +1,6 @@
 
 # virtual env
-ai_ml_venv/
+env/
 **/venv/
 **/__pycache__/
 
